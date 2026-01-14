@@ -390,6 +390,176 @@
         .footer-links a:hover {
             color: var(--primary);
         }
+
+        /* Scoped styles for the features section to avoid conflicts */
+        .f1-features-section {
+            padding: 80px 24px;
+            background: #fff;
+            font-family: sans-serif;
+        }
+
+        .f1-features-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .f1-features-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .f1-features-header h2 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #0f172a;
+        }
+
+        .f1-features-header p {
+            font-size: 18px;
+            color: #475569;
+            line-height: 1.5;
+        }
+
+        .f1-features-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+
+        @media (min-width: 768px) {
+            .f1-features-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .f1-feature-card {
+            display: flex;
+            align-items: start;
+            gap: 16px;
+            padding: 24px;
+            border: 1px solid #f1f5f9;
+            border-radius: 12px;
+            transition: border-color 0.3s;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        .f1-feature-card:hover {
+            border-color: #dbeafe;
+        }
+
+        .f1-feature-number {
+            background: #dbeafe;
+            color: #2563eb;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        .f1-feature-text h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #0f172a;
+            margin: 0 0 6px 0;
+        }
+
+        .f1-feature-text p {
+            font-size: 14px;
+            color: #475569;
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        /* Scoped styles for newsletter to match premium look */
+        .f1-newsletter-section {
+            background-color: #eff6ff;
+            padding: 64px 24px;
+            border-top: 1px solid #dbeafe;
+            font-family: sans-serif;
+        }
+
+        .f1-newsletter-container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .f1-newsletter-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 16px;
+        }
+
+        .f1-newsletter-text {
+            font-size: 16px;
+            color: #475569;
+            margin-bottom: 32px;
+            line-height: 1.5;
+        }
+
+        .f1-newsletter-form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            align-items: center;
+        }
+
+        @media (min-width: 768px) {
+            .f1-newsletter-form {
+                flex-direction: row;
+            }
+        }
+
+        .f1-input-email {
+            width: 100%;
+            padding: 12px 20px;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .f1-input-email:focus {
+            border-color: #000;
+        }
+
+        .f1-btn-submit {
+            background-color: #000;
+            color: #fff;
+            font-weight: 700;
+            padding: 12px 32px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.2s;
+            white-space: nowrap;
+            width: 100%;
+        }
+
+        @media (min-width: 768px) {
+            .f1-btn-submit {
+                width: auto;
+            }
+        }
+
+        .f1-btn-submit:hover {
+            background-color: #334155;
+        }
+
+        .f1-spam-notice {
+            font-size: 12px;
+            color: #94a3b8;
+            margin-top: 16px;
+        }
     </style>
 </head>
 
@@ -421,29 +591,42 @@
         </div>
     </section>
 
-    <section id="what-you-get" class="preview-section">
-        <div class="section-title">
-            <h2>What You Get for Just $1</h2>
-            <p>Unlock a treasure trove of resources to launch your online earning journey today.</p>
-        </div>
-
-        <div class="grid-container">
-            <div class="feature-card">
-                <div class="icon-box"><i class="fas fa-file-pdf"></i></div>
-                <h3>"First Dollar Blueprint" PDF</h3>
-                <p>A 20-page guide packed with actionable steps to set up your first online income stream.</p>
+    <section class="f1-features-section" id="what-you-get">
+        <div class="f1-features-container">
+            <div class="f1-features-header">
+                <h2>What you get for $1</h2>
+                <p>No fluff. Just the raw assets I used to launch in 4 hours.</p>
             </div>
-
-            <div class="feature-card">
-                <div class="icon-box"><i class="fas fa-video"></i></div>
-                <h3>15-Min Video Walkthrough</h3>
-                <p>Watch me build it live—click-by-click guidance to avoid pitfalls and start fast.</p>
-            </div>
-
-            <div class="feature-card">
-                <div class="icon-box"><i class="fas fa-users"></i></div>
-                <h3>Exclusive Community Access</h3>
-                <p>Join our X and Discord groups for support, tips, and real-time motivation.</p>
+            <div class="f1-features-grid">
+                <div class="f1-feature-card">
+                    <div class="f1-feature-number">1</div>
+                    <div class="f1-feature-text">
+                        <h3>The "Where to Post" List</h3>
+                        <p>50+ Curated free places to promote your startup today (Reddit, Directories, Communities).</p>
+                    </div>
+                </div>
+                <div class="f1-feature-card">
+                    <div class="f1-feature-number">2</div>
+                    <div class="f1-feature-text">
+                        <h3>Copy-Paste Sales Scripts</h3>
+                        <p>Proven "Cold DM" templates that get replies, not blocks. Soft sell vs. Hard sell strategies.
+                        </p>
+                    </div>
+                </div>
+                <div class="f1-feature-card">
+                    <div class="f1-feature-number">3</div>
+                    <div class="f1-feature-text">
+                        <h3>The 4-Hour Launch Checklist</h3>
+                        <p>The exact step-by-step process to go from Idea to Live Product in one evening for $0.</p>
+                    </div>
+                </div>
+                <div class="f1-feature-card">
+                    <div class="f1-feature-number">4</div>
+                    <div class="f1-feature-text">
+                        <h3>Community Access</h3>
+                        <p>Instant invite to our Discord of builders shipping their first products.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -488,7 +671,7 @@
                 <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
                         class="fas fa-star"></i><i class="fas fa-star"></i></div>
                 <p>"The community on X and Discord kept me going. Worth every penny!"</p>
-                <span class="user-name">- Christina D.</span>
+                <span class="user-name">- Cristina D.</span>
             </div>
             <div class="testimonial-card">
                 <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
@@ -496,6 +679,28 @@
                 <p>"Straightforward and effective. It’s work, but the guide makes it doable."</p>
                 <span class="user-name">- Radu I.</span>
             </div>
+        </div>
+    </section>
+
+    <section class="f1-newsletter-section">
+        <div class="f1-newsletter-container">
+            <h2 class="f1-newsletter-title">Not ready to spend $1?</h2>
+            <p class="f1-newsletter-text">Join the free newsletter. I share one tip every week on how to go from $0 to
+                $1.</p>
+
+            <form action="https://formsubmit.co/YOUR_EMAIL@GMAIL.COM" method="POST" class="f1-newsletter-form">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://firstonedollaronline.com/">
+                <input type="hidden" name="_subject" value="New Subscriber!">
+
+                <input type="email" name="email" placeholder="Enter your email" required class="f1-input-email">
+
+                <button type="submit" class="f1-btn-submit">
+                    Join Free
+                </button>
+            </form>
+
+            <p class="f1-spam-notice">No spam. Unsubscribe anytime.</p>
         </div>
     </section>
 
